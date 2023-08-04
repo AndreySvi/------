@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<link rel="stylesheet" href="./assets/style/style.css" />
+		<script defer src="./assets/script/script.js"></script>
+		<title>weather</title>
+	</head>
+	<body>
+		<div class="hero-window">
+			<div class="search-string">
+				<div class="input-hero">
+					<input id="inputCity" type="text" required />
+				</div>
+				<div  class="wrapper-loupe">
+					<img src="./assets/imeges/icon loupe.svg" id="loupe" alt="loupe" />
+				</div>
+			</div>
+			<p class="weather-location">
+				weather <span style="text-transform: lowercase">In</span
+				><span id="weather-location"> Minsk</span>
+			</p>
+			<p class="temperature">°C</p>
+
+			<div class="additional-indications">
+				<img id="imgCloudiness" style="width: 50px; height: 50px" alt="icon" />
+				<p class="cloudiness">Cloudiness</p>
+				<p class="humidity">HumidityBy:</p>
+				<p class="wind-speed">Wind Speed:</p>
+			</div>
+		</div>
+	</body>
+</html>
