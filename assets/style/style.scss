@@ -21,7 +21,7 @@ body {
 	background-size: 100% 100%;
 }
 
-.hero-window {
+.main-shell {
 	position: relative;
 	order: 32;
 	width: 520px;
@@ -50,8 +50,7 @@ body {
 			width: 86%;
 			padding-inline: 18px;
 			border-radius: 20px;
-			background-color: transparent;
-			background-color: rgba(255, 255, 255, 0.911);
+			background-color: rgba(255, 255, 255, 0.205);
 
 			& input {
 				width: 100%;
@@ -62,20 +61,26 @@ body {
 				border-color: transparent;
 
 				font-size: 22px;
-				color: black;
 			}
 		}
 
-		& .wrapper-loupe {
+		& .button-loupe {
 			width: 40px;
 			height: 40px;
 			border-radius: 20px;
+			border: none;
+			cursor: pointer;
+			transition: all 0.25s ease;
 
 			display: flex;
 			justify-content: center;
 			align-items: center;
 
 			background-color: rgba(255, 255, 255, 0.205);
+
+			&:hover {
+				background-color: hsla(0, 0%, 97%, 0.5);
+			}
 
 			& img {
 				width: 24px;

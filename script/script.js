@@ -9,7 +9,7 @@ let valueCity = document.getElementById('inputCity');
 let wrapperVector = document.getElementById('wrapper-vector');
 let weatherLocation = document.getElementById('weather-location');
 let imgCloudiness = document.getElementById('imgCloudiness');
-let loupeClick = document.getElementsByClassName('wrapper-loupe')[0];
+let loupeClick = document.getElementsByClassName('button-loupe')[0];
 let backgroundStule = document.querySelector('body');
 
 let city = 'minsk';
