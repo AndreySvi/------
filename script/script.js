@@ -10,7 +10,7 @@ let wrapperVector = document.getElementById('wrapper-vector');
 let weatherLocation = document.getElementById('weather-location');
 let imgCloudiness = document.getElementById('imgCloudiness');
 let loupeClick = document.getElementsByClassName('button-loupe')[0];
-let backgroundStule = document.querySelector('body');
+let backgroundStule = document.querySelector('.bg-image');
 
 let city = 'minsk';
 
@@ -34,21 +34,19 @@ function weatherData(city) {
 	)
 		.then((Response) => Response.json())
 		.then((data) => dataHandlerWeather(data));
+}
 
-	function dataHandlerWeather(data) {
-		console.log(data);
-
-		if (data.cod == 200) {
-			backgroundImage(data.name);
-			temp.innerText = `${(data.main.temp - 273.15).toFixed(2)}°C`;
-			humidity.innerText = `humidityBy: ${data.main.humidity}%`;
-			windSpeed.innerText = `wind Speed: ${data.wind.speed}km/h`;
-			cloudiness.innerText = `${data.weather[0].description}`;
-			weatherLocation.innerText = ` ${data.name}`;
-			imgCloudiness.src = `https://openweathermap.org/img/wn/${
-				data.weather[0].icon + '@2x.png'
-			}`;
-		}
+function dataHandlerWeather(data) {
+	if (data.cod == 200) {
+		backgroundImage(data.name);
+		temp.innerText = `${(data.main.temp - 273.15).toFixed(2)}°C`;
+		humidity.innerText = `humidityBy: ${data.main.humidity}%`;
+		windSpeed.innerText = `wind Speed: ${data.wind.speed}km/h`;
+		cloudiness.innerText = `${data.weather[0].description}`;
+		weatherLocation.innerText = ` ${data.name}`;
+		imgCloudiness.src = `https://openweathermap.org/img/wn/${
+			data.weather[0].icon + '@2x.png'
+		}`;
 	}
 }
 
@@ -60,8 +58,6 @@ function backgroundImage(city) {
 		.then((data) => valueBackgroundImage(data));
 
 	function valueBackgroundImage(data) {
-		console.log(data);
-
 		if (data.total != 0) {
 			backgroundStule.style.backgroundImage = `url(${
 				data.results[Math.floor(Math.random() * data.results.length)].urls.full

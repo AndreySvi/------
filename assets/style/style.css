@@ -8,20 +8,27 @@
 body {
   width: 100%;
   height: 100vh;
+  background-image: linear-gradient(rgba(160, 160, 160, 0.678), rgb(58, 58, 58));
+}
+
+.bg-image {
+  width: 100%;
+  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-image: linear-gradient(rgba(160, 160, 160, 0.678), rgb(58, 58, 58));
-  background-size: 100% 100%;
+  background-size: cover;
+  background-position: center;
 }
 
 .main-shell {
-  position: relative;
-  order: 32;
-  width: 520px;
-  height: 400px;
-  border-radius: 34px;
+  max-width: 520px;
+  width: 100%;
+  min-height: 400px;
+  margin-inline: 20px;
+  gap: 10px;
   padding: 40px;
+  border-radius: 34px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -32,12 +39,12 @@ body {
 }
 .main-shell .search-string {
   width: 100%;
-  height: 40px;
-  display: flex;
+  min-height: 40px;
   gap: 10px;
+  display: flex;
 }
 .main-shell .search-string .input-hero {
-  width: 86%;
+  width: 100%;
   padding-inline: 18px;
   border-radius: 20px;
   background-color: rgba(255, 255, 255, 0.205);
@@ -51,15 +58,12 @@ body {
   font-size: 22px;
 }
 .main-shell .search-string .button-loupe {
-  width: 40px;
-  height: 40px;
+  max-width: 50%;
+  min-width: 40px;
+  min-height: 40px;
   border-radius: 20px;
   border: none;
   cursor: pointer;
-  transition: all 0.25s ease;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   background-color: rgba(255, 255, 255, 0.205);
 }
 .main-shell .search-string .button-loupe:hover {
@@ -77,4 +81,14 @@ body {
 }
 .main-shell .additional-indications .cloudiness {
   text-indent: 8px;
+}
+
+@media screen and (max-width: 320px) {
+  .search-string {
+    flex-direction: column;
+    align-items: center;
+  }
+  .button-loupe {
+    width: 35%;
+  }
 }/*# sourceMappingURL=style.css.map */

@@ -9,26 +9,38 @@
 		<title>weather</title>
 	</head>
 	<body>
-		<div class="main-shell">
-			<div class="search-string">
-				<div class="input-hero">
-					<input id="inputCity" type="text" required />
+		<div class="bg-image">
+			<div class="main-shell">
+				<div class="search-string">
+					<div class="input-hero">
+						<input id="inputCity" type="text" title="a"/>
+					</div>
+					<button class="button-loupe">
+						<img
+							title="gargag"
+							src="./assets/imeges/icon loupe.svg"
+							id="loupe"
+							alt="loupe"
+						/>
+					</button>
 				</div>
-				<button class="button-loupe">
-					<img src="./assets/imeges/icon loupe.svg" id="loupe" alt="loupe" />
-				</button>
-			</div>
-			<p class="weather-location">
-				weather <span style="text-transform: lowercase">In</span
-				><span id="weather-location"> Minsk</span>
-			</p>
-			<p class="temperature">°C</p>
+				<div></div>
+				<p class="weather-location">
+					weather <span style="text-transform: lowercase">In</span
+					><span id="weather-location"> Minsk</span>
+				</p>
+				<p class="temperature">°C</p>
 
-			<div class="additional-indications">
-				<img id="imgCloudiness" style="width: 50px; height: 50px" alt="icon" />
-				<p class="cloudiness">Cloudiness</p>
-				<p class="humidity">HumidityBy:</p>
-				<p class="wind-speed">Wind Speed:</p>
+				<div class="additional-indications">
+					<img
+						id="imgCloudiness"
+						style="width: 50px; height: 50px"
+						alt="icon"
+					/>
+					<p class="cloudiness">Cloudiness</p>
+					<p class="humidity">HumidityBy:</p>
+					<p class="wind-speed">Wind Speed:</p>
+				</div>
 			</div>
 		</div>
 	</body>
