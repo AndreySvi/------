@@ -62,10 +62,6 @@ function backgroundImage(city) {
 			backgroundStule.style.backgroundImage = `url(${
 				data.results[Math.floor(Math.random() * data.results.length)].urls.full
 			})`;
-		} else {
-			backgroundStule.style.backgroundImage = `linear-gradient(
-				rgba(160, 160, 160, 0.678),
-				rgb(58, 58, 58)`;
 		}
 	}
 }
